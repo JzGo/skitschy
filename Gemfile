@@ -9,6 +9,7 @@ gem 'coffee-rails'
 gem 'jquery-rails'
 gem 'turbolinks'
 gem 'devise'
+gem 'bootstrap-sass'
 
 group :development do
   gem 'better_errors'
