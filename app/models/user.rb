@@ -1,4 +1,5 @@
 class User < ActiveRecord::Base
+  has_one :profile
   has_many :following_through, class_name: 'Relationship', foreign_key: :following_id, dependent: :destroy
   has_many :follower_through, class_name: 'Relationship', foreign_key: :follower_id, dependent: :destroy
   has_many :followings, through: :follower_through, source: :following
