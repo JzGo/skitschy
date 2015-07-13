@@ -31,4 +31,19 @@ describe User do
       expect(@user1.followings).to include(@user2)
     end
   end
+
+  context "when a user gains a follower" do
+    it "should be able to return follower" do
+      @user2.followers << @user2
+      expect(@user1.followers).to include(@user2)
+    end
+  end
+
+  context "when a user follows many users" do
+    it "should be able to return all users" do
+      @user1.followings << @user2
+      @user1.followings << @user3
+      expect(@user1.followings).to eq([@user2, @user3])
+    end
+  end
 end
