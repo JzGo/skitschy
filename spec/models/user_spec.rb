@@ -15,7 +15,7 @@ describe User do
 
   context "when a user creates an account" do
     it "they should not be following other users" do
-      expect(@user1.following).to eq([])
+      expect(@user1.followings).to eq([])
     end
   end
 end
