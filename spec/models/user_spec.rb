@@ -61,4 +61,11 @@ describe User do
       expect(@user1pro).to_not be_nil
     end
   end
+
+  context "a user's profile" do
+    it "should be accessible" do
+      @user2pro = Profile.find(@user2.id)
+      expect(@user2pro.username).to eq("Name")
+    end
+  end
 end
