@@ -10,10 +10,18 @@
     <!-- SIDEBAR USER TITLE -->
     <div class="profile-usertitle">
       <div class="profile-usertitle-name">
-        Marcus Doe
+        <%= @profile.username %>
       </div>
-      <div class="profile-usertitle-job">
-        Developer
+      <div class="profile-tagline">
+        <%= @profile.tagline %>
+      </div>
+      <div class="profile-aboutme">
+        <strong>About Me</strong><br>
+        <p><%= @profile.aboutme %></p>       
+      </div>
+      <div class="profile-genres">
+        <strong>Genres I enjoy:</strong><br>
+        <p><%= @profile.genres %></p>
       </div>
     </div>
     <!-- END SIDEBAR USER TITLE -->
