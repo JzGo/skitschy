@@ -10,7 +10,11 @@
     <!-- SIDEBAR USER TITLE -->
     <div class="profile-usertitle">
       <div class="profile-usertitle-name">
-        Hey, <%= @profile.username if @profile.username %> !
+        <% if @profile.username %>
+          Hey, <%= @profile.username %> !
+        <% else %>
+          Hey, you!
+        <% end %>
       </div>
       <div class="profile-usertitle-job">
 
