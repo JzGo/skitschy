@@ -15,99 +15,137 @@
  *= require_self
  */
 
- .navbar-default {
-   background-color: #f8f8f8;
-   border-color: #e7e7e7;
- }
- .navbar-default .navbar-brand {
-   color: #333333;
- }
- .navbar-default .navbar-brand:hover,
- .navbar-default .navbar-brand:focus {
-   color: #333333;
-   background-color: transparent;
- }
- .navbar-default .navbar-text {
-   color: #555555;
- }
- .navbar-default .navbar-nav > li > a {
-   color: #999999;
- }
- .navbar-default .navbar-nav > li > a:hover,
- .navbar-default .navbar-nav > li > a:focus {
-   color: #333333;
-   background-color: transparent;
- }
- .navbar-default .navbar-nav > .active > a,
- .navbar-default .navbar-nav > .active > a:hover,
- .navbar-default .navbar-nav > .active > a:focus {
-   color: #333333;
-   background-color: transparent;
- }
- .navbar-default .navbar-nav > .disabled > a,
- .navbar-default .navbar-nav > .disabled > a:hover,
- .navbar-default .navbar-nav > .disabled > a:focus {
-   color: #eeeeee;
-   background-color: transparent;
- }
- .navbar-default .navbar-toggle {
-   border-color: #eeeeee;
- }
- .navbar-default .navbar-toggle:hover,
- .navbar-default .navbar-toggle:focus {
-   background-color: #ffffff;
- }
- .navbar-default .navbar-toggle .icon-bar {
-   background-color: #999999;
- }
- .navbar-default .navbar-collapse,
- .navbar-default .navbar-form {
-   border-color: #e7e7e7;
- }
- .navbar-default .navbar-nav > .open > a,
- .navbar-default .navbar-nav > .open > a:hover,
- .navbar-default .navbar-nav > .open > a:focus {
-   background-color: transparent;
-   color: #333333;
- }
- @media (max-width: 767px) {
-   .navbar-default .navbar-nav .open .dropdown-menu > li > a {
-     color: #999999;
-   }
-   .navbar-default .navbar-nav .open .dropdown-menu > li > a:hover,
-   .navbar-default .navbar-nav .open .dropdown-menu > li > a:focus {
-     color: #333333;
-     background-color: transparent;
-   }
-   .navbar-default .navbar-nav .open .dropdown-menu > .active > a,
-   .navbar-default .navbar-nav .open .dropdown-menu > .active > a:hover,
-   .navbar-default .navbar-nav .open .dropdown-menu > .active > a:focus {
-     color: #333333;
-     background-color: transparent;
-   }
-   .navbar-default .navbar-nav .open .dropdown-menu > .disabled > a,
-   .navbar-default .navbar-nav .open .dropdown-menu > .disabled > a:hover,
-   .navbar-default .navbar-nav .open .dropdown-menu > .disabled > a:focus {
-     color: #eeeeee;
-     background-color: transparent;
-   }
- }
- .navbar-default .navbar-link {
-   color: #999999;
- }
- .navbar-default .navbar-link:hover {
-   color: #333333;
- }
- .navbar-default .btn-link {
-   color: #999999;
- }
- .navbar-default .btn-link:hover,
- .navbar-default .btn-link:focus {
-   color: #333333;
- }
- .navbar-default .btn-link[disabled]:hover,
- fieldset[disabled] .navbar-default .btn-link:hover,
- .navbar-default .btn-link[disabled]:focus,
- fieldset[disabled] .navbar-default .btn-link:focus {
-   color: #eeeeee;
- }
+body {
+  background-color: #daf3ff;
+}
+
+
+/***
+User Profile Sidebar by @keenthemes
+A component of Metronic Theme - #1 Selling Bootstrap 3 Admin Theme in Themeforest: http://j.mp/metronictheme
+Licensed under MIT
+***/
+
+
+/* Profile container */
+.profile {
+  margin: 20px 0;
+}
+
+/* Profile sidebar */
+.profile-sidebar {
+  padding: 20px 0 10px 0;
+  background: #fff;
+  box-shadow: -3px 3px 10px;
+}
+
+.profile-userpic img {
+  float: none;
+  margin: 0 auto;
+  width: 50%;
+  height: 50%;
+  -webkit-border-radius: 50% !important;
+  -moz-border-radius: 50% !important;
+  border-radius: 50% !important;
+}
+
+.profile-usertitle {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.profile-usertitle-name {
+  color: #5a7391;
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 7px;
+}
+
+.profile-tagline {
+  text-transform: uppercase;
+  color: #5b9bd1;
+  font-size: 12px;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+.profile-userbuttons {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.profile-userbuttons .btn {
+  text-transform: uppercase;
+  font-size: 11px;
+  font-weight: 600;
+  padding: 6px 15px;
+  margin-right: 5px;
+}
+
+.profile-userbuttons .btn:last-child {
+  margin-right: 0px;
+}
+
+.profile-usermenu {
+  margin-top: 30px;
+}
+
+.profile-usermenu ul li {
+  border-bottom: 1px solid #f0f4f7;
+}
+
+.profile-usermenu ul li:last-child {
+  border-bottom: none;
+}
+
+.profile-usermenu ul li a {
+  color: #93a3b5;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.profile-usermenu ul li a i {
+  margin-right: 8px;
+  font-size: 14px;
+}
+
+.profile-usermenu ul li a:hover {
+  background-color: #fafcfd;
+  color: #5b9bd1;
+}
+
+.profile-usermenu ul li.active {
+  border-bottom: none;
+}
+
+.profile-usermenu ul li.active a {
+  color: #5b9bd1;
+  background-color: #f6f9fb;
+  border-left: 2px solid #5b9bd1;
+  margin-left: -2px;
+}
+
+/* Profile Content */
+.profile-content {
+  padding: 20px;
+  background: #fff;
+  min-height: 460px;
+  box-shadow: -3px 3px 10px;
+
+}
+
+.navbar {
+  background-color: #fafaff;
+  box-shadow: -3px 3px 10px;
+
+}
+
+.container {
+  background: #fff;
+  box-shadow: -3px 3px 10px;
+
+}
+
+.separator {
+  background: #ddd;
+}

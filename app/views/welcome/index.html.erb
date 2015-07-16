@@ -1,1 +1,43 @@
 <%= render "shared/navbar" %>
+<br><br>
+<div class="row profile">
+<div class="col-md-3">
+  <div class="profile-sidebar">
+    <!-- SIDEBAR USERPIC -->
+    <div class="profile-userpic">
+      <img src="http://keenthemes.com/preview/metronic/theme/assets/admin/pages/media/profile/profile_user.jpg" class="img-responsive" alt="">
+    </div>
+    <!-- END SIDEBAR USERPIC -->
+    <!-- SIDEBAR USER TITLE -->
+    <div class="profile-usertitle">
+      <div class="profile-usertitle-name">
+        <% if @profile.username %>
+          Hey, <%= @profile.username %> !
+        <% else %>
+          Hey, you!
+        <% end %>
+      </div>
+      <div class="profile-usertitle-job">
+
+      </div>
+    </div>
+    <!-- END SIDEBAR USER TITLE -->
+    <!-- SIDEBAR BUTTONS -->
+    <div class="profile-userbuttons">
+      <center>
+        <button type="button" class="btn btn-primary btn-sm">Notes <span class="badge">1</badge></button>
+      <center>
+    </div>
+  </div>
+</div>
+<div class="col-md-9">
+  <div class="profile-content">
+    <div class="list-group">
+      <a href="#" class="list-group-item">
+        <h4 class="list-group-item-heading">List group item heading</h4>
+        <p class="list-group-item-text">...</p>
+      </a>
+     </div>
+    </div>
+  </div>
+</div>

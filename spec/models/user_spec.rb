@@ -54,4 +54,18 @@ describe User do
       expect(@user1.followers).to eq([@user2, @user3])
     end
   end
+
+  context "when a user is created"  do
+    it "a corresponding user record should be created" do
+      @user1pro = Profile.find(@user1.id)
+      expect(@user1pro).to_not be_nil
+    end
+  end
+
+  context "a user's profile" do
+    it "should be accessible" do
+      @user2pro = Profile.find(@user2.id)
+      expect(@user2pro.username).to eq("Name")
+    end
+  end
 end
