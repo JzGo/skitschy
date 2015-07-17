@@ -1,18 +1,7 @@
 <%= form_for @story do |f| %>
-  <div id="error_group">
-    <% if @story.errors.any? %>
-      <h3>
-        <%= pluralize(@story.errors.count, "error")%>kept this story from being saved!
-      </h3>
-      <ul>
-        <% @story.errors.full_messages.each do |msg| %>
-        <li>
-          <%= msg %>
-        </li>
-        <% end %>
-      </ul>
-    <% end %>
-  </div>
+  <p>
+    <input type="hidden" value="<%= current_user.id %>" name="user_id">
+  </p>
 
   <p>
     <%= f.label :title %>
