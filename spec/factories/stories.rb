@@ -4,5 +4,4 @@ FactoryGirl.define do
     genre "Genre"
     body "Body"
   end
-
 end
