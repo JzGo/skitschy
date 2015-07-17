@@ -1,0 +1,12 @@
+<%= render "shared/navbar" %>
+
+<br><br>
+
+<div class="container">
+  <div class="story-head">
+    <h2>Stories</h2>
+  </div>
+  <% @stories.each do |story| %>
+    <div class="story"><%= link_to story.title, story_path(story) %></div>
+  <% end %>
+</div>
