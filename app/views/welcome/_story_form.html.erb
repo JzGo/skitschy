@@ -1,0 +1,35 @@
+<%= form_for @story, url: new_user_story_path  do |f| %>
+  <div id="error_group">
+    <% if @story.errors.any? %>
+      <h3>
+        <%= pluralize(@story.errors.count, "error")%>kept this story from being saved!
+      </h3>
+      <ul>
+        <% @story.errors.full_messages.each do |msg| %>
+        <li>
+          <%= msg %>
+        </li>
+        <% end %>
+      </ul>
+    <% end %>
+  </div>
+
+  <p>
+    <%= f.label :title %>
+    <%= f.text_field :title %>
+  </p>
+
+  <p>
+    <%= f.label :genre %>
+    <%= f.text_field :genre %>
+  </p>
+
+  <p>
+    <%= f.label :body %>
+    <%= f.text_area :body %>
+  </p>
+
+  <p>
+    <%= f.submit 'Print!' %>
+  </p>
+<% end %>
