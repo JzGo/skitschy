@@ -1,8 +1,8 @@
 FactoryGirl.define do
   factory :story do
-    title "MyString"
-genre "MyString"
-body "MyString"
+    title "Title"
+    genre "Genre"
+    body "Body"
   end
 
 end
