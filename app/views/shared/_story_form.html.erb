@@ -1,6 +1,6 @@
 <%= form_for @story do |f| %>
   <p>
-    <input type="hidden" value="<%= current_user.id %>" name="user_id">
+    <input type="hidden" value="<%= current_user.id %>" name="story[user_id]">
   </p>
 
   <p>
@@ -19,6 +19,6 @@
   </p>
 
   <p>
-    <%= f.submit 'Print!' %>
+    <%= f.submit 'Okay!' %>
   </p>
 <% end %>

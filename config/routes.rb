@@ -8,7 +8,7 @@ Rails.application.routes.draw do
     resources :profiles
   end
 
-  resources :stories, only: [:index, :show]
+  resources :stories
 
   root 'welcome#index'
   # The priority is based upon order of creation: first created -> highest priority.
