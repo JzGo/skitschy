@@ -9,6 +9,8 @@ Rails.application.routes.draw do
     resources :profiles
   end
 
+  resources :relationships
+
   resources :stories
 
   root 'welcome#index'

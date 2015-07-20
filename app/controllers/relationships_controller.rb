@@ -2,6 +2,7 @@ class RelationshipsController < ApplicationController
 
   def create
     Relationship.create relationship_params
+    redirect_to :back
   end
 
   def destroy_via_users
