@@ -46,7 +46,7 @@
       <% @stories.each do |story| %>
         <a href="/stories/<%= story.id %>" class="list-group-item">
           <h4 class="list-group-item-title"><%= story.title %></h4>
-          <h6 class="list-group-item-author">By: <%= @profile.username %></h6> 
+          <h6 class="list-group-item-author">By: <%= story.authors %></h6> 
           <p class="list-group-item-text"><%= story.body %></p>
         </a>
       <% end %>

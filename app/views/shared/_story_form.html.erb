@@ -4,6 +4,10 @@
   </p>
 
   <p>
+    <input type="hidden" value="<%= @profile.username %>" name="story[authors]">
+  </p>
+
+  <p>
     <%= f.label :title %>
     <%= f.text_field :title %>
   </p>
