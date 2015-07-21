@@ -1,0 +1,28 @@
+<%= form_for Story.new do |f| %>
+  <p>
+    <input type="hidden" value="<%= current_user.id %>" name="story[user_id]">
+  </p>
+
+  <p>
+    <input type="hidden" value="<%= @profile.username %>" name="story[authors]">
+  </p>
+
+  <p>
+    <%= f.label :title %>
+    <%= f.text_field :title %>
+  </p>
+
+  <p>
+    <%= f.label :genre %>
+    <%= f.text_field :genre %>
+  </p>
+
+  <p>
+    <%= f.label :body %>
+    <%= f.text_area :body %>
+  </p>
+
+  <p>
+    <%= f.submit 'Okay!' %>
+  </p>
+<% end %>

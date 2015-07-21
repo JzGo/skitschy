@@ -25,7 +25,7 @@ FactoryGirl.define do
        username "Bananapeel"
        tagline "whoops"
        aboutme "snicker"
-       genres "humor"
+       genres "Humor"
      end
    end
 end
