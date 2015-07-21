@@ -5,8 +5,8 @@ class RelationshipsController < ApplicationController
     redirect_to :back
   end
 
-  def destroy_via_users
-    target = Relationship.find_by follower_id: params[:follower_id], following_id: params[:following_id]
+  def destroy
+    target = Relationship.find_by relationship_params
     if target
       target.destroy
       redirect_to :back
