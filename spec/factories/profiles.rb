@@ -6,7 +6,6 @@ FactoryGirl.define do
     aboutme "I am"
     genres "genre"
 
-
     factory :scifi do
        username "Alien"
        tagline "Another"
