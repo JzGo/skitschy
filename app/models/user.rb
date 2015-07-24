@@ -6,6 +6,7 @@ class User < ActiveRecord::Base
   has_many :follower_through, class_name: 'Relationship', foreign_key: :follower_id, dependent: :destroy
   has_many :followings, through: :follower_through, source: :follower
   has_many :followers, through: :following_through, source: :following
+  has_many :followings_stories, through: :followings, source: :stories
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable,
