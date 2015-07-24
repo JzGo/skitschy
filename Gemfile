@@ -10,6 +10,7 @@ gem 'jquery-rails'
 gem 'turbolinks'
 gem 'devise'
 gem 'bootstrap-sass'
+gem 'mailboxer'
 
 group :development do
   gem 'better_errors'
