@@ -11,7 +11,7 @@
     </div>
 
       <div class="col-md-4">
-        <div class="panel panel-default">
+        <div  class="panel panel-default">
           <div class="panel-body">
             <%= render 'mailbox/folders' %>
           </div>
@@ -20,12 +20,12 @@
 
       <div class="col-md-8">
 
-        <% if is_conversation %>
-          <%= render 'conversations/form' %>
-        <% else %>
-          <%= render partial: 'conversations/conversation', collection: messages %>
+            <% if is_conversation %>
+              <%= render 'conversations/form' %>
+            <% else %>
+              <%= render partial: 'conversations/conversation', collection: messages %>
 
-        <% end %>
+            <% end %>
             <!-- individual conversations will show here -->
 
       </div>
