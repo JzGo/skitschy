@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  root 'welcome#index'
 
 
   devise_for :users
@@ -17,7 +18,14 @@ Rails.application.routes.draw do
   get "mailbox/sent" => "mailbox#sent", as: :mailbox_sent
   get "mailbox/trash" => "mailbox#trash", as: :mailbox_trash
 
-  root 'welcome#index'
+  resources :conversations do
+    member do
+      post :reply
+      post :trash
+      post :untrash
+    end
+  end
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
