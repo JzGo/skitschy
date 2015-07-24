@@ -15,7 +15,6 @@ class StoriesController < ApplicationController
     @story = Story.find(params[:id])
   end
 
-
   private
 
     def story_params
