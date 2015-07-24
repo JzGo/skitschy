@@ -1,0 +1,29 @@
+<%= render 'shared/navbar' %>
+<br><br>
+<div class="profile-content col-md-10 col-md-offset-1">
+
+
+    <div class="row">
+      <div class="spacer">
+        <!-- we'll configure this to compose new conversations later -->
+         <%= link_to "Compose", "#", class: "btn btn-success" %><br><br>
+      </div>
+    </div>
+
+      <div class="col-md-4">
+        <div class="panel panel-default">
+          <div class="panel-body">
+            <%= render 'mailbox/folders' %>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-8">
+        <div class="panel panel-default">
+          <div class="panel-body">
+            <!-- individual conversations will show here -->
+          </div>
+        </div>
+      </div>
+
+</div>

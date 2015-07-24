@@ -3,7 +3,15 @@ class ApplicationController < ActionController::Base
   # For APIs, you may want to use :null_session instead.
   protect_from_forgery with: :exception
 
+  helper_method :mailbox
+
   before_action :configure_permitted_parameters, if: :devise_controller?
+
+  private
+
+  def mailbox
+    @mailbox ||= current_user.mailbox
+  end
 
   protected
 
